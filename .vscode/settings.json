@@ -1,0 +1,8 @@
+{
+        "arduino.enableUSBDetection": true,
+        "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
+        "cSpell.words": [
+                "Arduino",
+                "millis"
+        ]
+}

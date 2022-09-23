@@ -1,0 +1,7 @@
+{
+    "board": "arduino:sam:arduino_due_x",
+    "output": "/tmp/arduino/builds/rs485_monitor",
+    "port": "/dev/ttyACM0",
+    "arduino.analyzeOnOpen": false,
+    "sketch": "rs485_monitor.ino"
+}

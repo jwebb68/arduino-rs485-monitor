@@ -1,0 +1,99 @@
+{
+        "version": 4,
+        "configurations": [
+                {
+                        "name": "Linux",
+                        "compilerPath": "",
+                        "compilerArgs": [],
+                        "intelliSenseMode": "linux-gcc-x64",
+                        "includePath": [
+                                "${workspaceFolder}/**"
+                        ],
+                        "forcedInclude": [],
+                        "cStandard": "c17",
+                        "cppStandard": "c++17",
+                        "defines": []
+                },
+                {
+                        "name": "Arduino Due",
+                        //"compilerPath": "/home/jwebb/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/arm-none-eabi-g++",
+                        //"compilerPath": "/nix/store/r4zplfqzrb6m0lma0dd2kxq3wn8l8yh0-gcc-arm-embedded-7.3.1/bin/arm-none-eabi-g++",
+                        "compilerPath": "${workspaceFolder}/.nix/arm-none-eabi-g++",
+                        "compilerArgs": [
+                                "-Wall",
+                                "-Wextra",
+                                "-std=gnu++11",
+                                "-ffunction-sections",
+                                "-fdata-sections",
+                                "-nostdlib",
+                                "-fno-threadsafe-statics",
+                                "--param",
+                                "-fno-rtti",
+                                "-fno-exceptions"
+                        ],
+                        "intelliSenseMode": "gcc-arm",
+                        "includePath": [
+                                "${HOME}/.arduino15/packages/arduino/hardware/**",
+                                "${HOME}/Arduino/libraries/**"
+                        ],
+                        "forcedInclude": [
+                                "${HOME}/.arduino15/packages/arduino/hardware/sam/1.6.12/cores/arduino/Arduino.h"
+                        ],
+                        "cStandard": "c11",
+                        "cppStandard": "c++11",
+                        "defines": [
+                                "F_CPU=84000000L",
+                                "ARDUINO=10819",
+                                "ARDUINO_SAM_DUE",
+                                "ARDUINO_ARCH_SAM",
+                                "__SAM3X8E__",
+                                "USB_VID=0x2341",
+                                "USB_PID=0x003e",
+                                "USBCON",
+                                "USB_MANUFACTURER=\"Arduino LLC\"",
+                                "USB_PRODUCT=\"Arduino Due\"",
+                                "USBCON"
+                        ]
+                },
+                {
+                        "name": "Arduino Uno",
+                        //"compilerPath": "/home/jwebb/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/arm-none-eabi-g++",
+                        //"compilerPath": "/nix/store/r4zplfqzrb6m0lma0dd2kxq3wn8l8yh0-gcc-arm-embedded-7.3.1/bin/arm-none-eabi-g++",
+                        "compilerPath": "${workspaceFolder}/.nix/arm-none-eabi-g++",
+                        "compilerArgs": [
+                                "-Wall",
+                                "-Wextra",
+                                "-std=gnu++11",
+                                "-ffunction-sections",
+                                "-fdata-sections",
+                                "-nostdlib",
+                                "-fno-threadsafe-statics",
+                                "--param",
+                                "-fno-rtti",
+                                "-fno-exceptions"
+                        ],
+                        "intelliSenseMode": "gcc-arm",
+                        "includePath": [
+                                "${HOME}/.arduino15/packages/arduino/hardware/**",
+                                "${HOME}/Arduino/libraries/**"
+                        ],
+                        "forcedInclude": [
+                                "${HOME}/.arduino15/packages/arduino/hardware/avr/1.8.5/cores/arduino/Arduino.h"
+                        ],
+                        "cStandard": "c11",
+                        "cppStandard": "c++11",
+                        "defines": [
+                                "F_CPU=84000000L",
+                                "ARDUINO=10819",
+                                "ARDUINO_AVR_UNO",
+                                "ARDUINO_ARCH_AVR",
+                                "USB_VID=0x2341",
+                                "USB_PID=0x003e",
+                                "USBCON",
+                                "USB_MANUFACTURER=\"Arduino LLC\"",
+                                "USB_PRODUCT=\"Arduino Uno\"",
+                                "USBCON"
+                        ]
+                }
+        ]
+}

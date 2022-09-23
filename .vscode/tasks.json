@@ -1,0 +1,102 @@
+{
+        // See https://go.microsoft.com/fwlink/?LinkId=733558
+        // for the documentation about the tasks.json format
+        "version": "2.0.0",
+        "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new",
+                "showReuseMessage": false,
+                "clear": false
+        },
+        "tasks": [
+                {
+                        // call verify
+                        "label": "build",
+                        "command": "${command:arduino.verify}",
+                        "presentation": {
+                                "echo": true,
+                                "reveal": "always",
+                                "focus": false,
+                                "panel": "new",
+                                "showReuseMessage": false,
+                                "clear": false
+                        },
+                        "problemMatcher": [
+                                {
+                                        "owner": "cpp",
+                                        "fileLocation": [
+                                                "relative",
+                                                "${workspaceFolder}"
+                                        ],
+                                        "pattern": [
+                                                {
+                                                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                                                        "file": 1,
+                                                        "line": 2,
+                                                        "column": 3,
+                                                        "severity": 4,
+                                                        "message": 5
+                                                }
+                                        ]
+                                }
+                        ],
+                        "group": "build"
+                },
+                {
+                        // call upload
+                        "label": "upload",
+                        "command": "${command:arduino.upload}",
+                        "presentation": {
+                                "echo": true,
+                                "reveal": "always",
+                                "focus": false,
+                                "panel": "new",
+                                "showReuseMessage": false,
+                                "clear": false
+                        },
+                        "problemMatcher": [
+                                {
+                                        "owner": "cpp",
+                                        "fileLocation": [
+                                                "relative",
+                                                "${workspaceFolder}"
+                                        ],
+                                        "pattern": [
+                                                {
+                                                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                                                        "file": 1,
+                                                        "line": 2,
+                                                        "column": 3,
+                                                        "severity": 4,
+                                                        "message": 5
+                                                }
+                                        ]
+                                }
+                        ],
+                        "group": "build"
+                },
+                {
+                        // call closeSerialMonitor
+                        "label": "Close Serial Monitor",
+                        "command": "echo ${input:closeSerialMonitor}",
+                        "group": "build",
+                        "problemMatcher": []
+                },
+                {
+                        // call openSerialMonitor
+                        "label": "Open Serial Monitor",
+                        "command": "${command:arduino.openSerialMonitor}",
+                        "group": "build",
+                        "problemMatcher": []
+                },
+                {
+                        // format all src
+                        "label": "format",
+                        "type": "shell",
+                        "command": ".nix/nixsh  make format",
+                        "group": "build"
+                }
+        ]
+}
